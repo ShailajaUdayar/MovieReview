@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MovieDataSource {
 
-    private static final List<Movie> MOVIE_DATA_SOURCE = new ArrayList<>();
+    public static final List<Movie> MOVIE_DATA_SOURCE = new ArrayList<>();
 
 
     static {

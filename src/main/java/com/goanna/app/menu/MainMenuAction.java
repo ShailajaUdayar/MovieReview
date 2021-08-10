@@ -12,6 +12,7 @@ public class MainMenuAction extends MenuAction {
     public static final GenreMenuAction GENRE_MENU_ACTION = new GenreMenuAction();
     public static final ExitMenuAction EXIT_MENU_ACTION = new ExitMenuAction();
     public static final ActorMenuAction ACTOR_MENU_ACTION = new ActorMenuAction();
+    public static final TitleMenuAction TITLE_MENU_ACTION = new TitleMenuAction();
 
 
     static {
@@ -55,6 +56,7 @@ public class MainMenuAction extends MenuAction {
         switch (choice) {
             case "1" : return GENRE_MENU_ACTION;
             case "2" : return ACTOR_MENU_ACTION;
+            case "4" : return TITLE_MENU_ACTION;
             case "X" : return EXIT_MENU_ACTION;
         }
         return this;

@@ -1,4 +1,4 @@
-package com.goanna.app.data;
+package com.goanna.app;
 
 import com.goanna.app.menu.MainMenuAction;
 import com.goanna.app.menu.MenuAction;
