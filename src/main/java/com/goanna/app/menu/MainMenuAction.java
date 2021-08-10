@@ -18,7 +18,7 @@ public class MainMenuAction extends MenuAction {
         MAIN_MENU.put("3", "Rating");
         MAIN_MENU.put("4", "Title");
         MAIN_MENU.put("5", "Year");
-        MAIN_MENU.put("X", "Exit"); 
+        MAIN_MENU.put("X", "Exit");
     }
 
     @Override

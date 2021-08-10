@@ -48,6 +48,54 @@ public class MovieDataSource {
         m5.setYear(2021);
         MOVIE_DATA_SOURCE.add(m5);
 
+        Movie m6 = new Movie();
+        m6.setTitle("Edge of Tomorrow");
+        m6.setActor("Tom Cruise");
+        m6.setGenre(Genre.SCIFI);
+        m6.setRating(7.9);
+        m6.setYear(2014);
+        MOVIE_DATA_SOURCE.add(m6);
+
+        Movie m7 = new Movie();
+        m7.setTitle("Taken");
+        m7.setActor("Liam Neeson");
+        m7.setGenre(Genre.ACTION);
+        m7.setRating(7.9);
+        m7.setYear(2008);
+        MOVIE_DATA_SOURCE.add(m7);
+
+        Movie m8 = new Movie();
+        m8.setTitle("Fight Club");
+        m8.setActor("Brad Pitt");
+        m8.setGenre(Genre.DRAMA);
+        m8.setRating(8.8);
+        m8.setYear(1999);
+        MOVIE_DATA_SOURCE.add(m8);
+
+        Movie m9 = new Movie();
+        m9.setTitle("Jungle Cruise");
+        m9.setActor("Dwayne Johnson");
+        m9.setGenre(Genre.COMEDY);
+        m9.setRating(6.7);
+        m9.setYear(2021);
+        MOVIE_DATA_SOURCE.add(m9);
+
+        Movie m10 = new Movie();
+        m10.setTitle("It (I)");
+        m10.setActor("Jaedon Martell");
+        m10.setGenre(Genre.HORROR);
+        m10.setRating(7.3);
+        m10.setYear(2017);
+        MOVIE_DATA_SOURCE.add(m10);
+
+        Movie m11 = new Movie();
+        m11.setTitle("The Departed");
+        m11.setActor("Leonardo DiCaprio");
+        m11.setGenre(Genre.DRAMA);
+        m11.setRating(8.5);
+        m11.setYear(2006);
+        MOVIE_DATA_SOURCE.add(m11);
+
     }
 
     public static List<Movie> getMoviesByGenre(Genre genre) {
