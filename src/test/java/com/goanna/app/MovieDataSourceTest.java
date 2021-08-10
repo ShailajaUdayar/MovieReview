@@ -10,6 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MovieDataSourceTest {
+
     @Test
     public void testGetMoviesByGenre() {
         List<Movie> moviesByComedy = MovieDataSource.getMoviesByGenre(Genre.COMEDY);
@@ -30,7 +31,27 @@ class MovieDataSourceTest {
         assertEquals("Dwayne Johnson", m2.getActor());
         assertEquals(6.7, m2.getRating());
         assertEquals(Genre.COMEDY, m2.getGenre());
+    }
+
+    @Test
+    public void testGetMoviesByActor() {
+        List<Movie> moviesByActor = MovieDataSource.getMoviesByActor(new Movie().getActor());
+        assertNotNull(moviesByActor);
+        assertTrue(moviesByActor.isEmpty());
+        assertEquals(0, moviesByActor.size());
+        Movie m1 = moviesByActor.get(1);
+       // assertEquals("Taken", m1.getTitle());
+        //assertEquals(2008, m1.getYear());
+        assertEquals("Taken", m1.getActor());
+        //assertEquals(7.9, m1.getRating());
+        //assertEquals(Genre.COMEDY, m1.getGenre());
 
 
+//        Movie m2 = moviesByActor.get(1);
+//        assertEquals("Jungle Cruise", m2.getTitle());
+//        assertEquals(2021, m2.getYear());
+//        assertEquals("Dwayne Johnson", m2.getActor());
+//        assertEquals(6.7, m2.getRating());
+//        assertEquals(Genre.COMEDY, m2.getGenre());
     }
 }

@@ -12,7 +12,7 @@ public class TitleMenuAction extends MenuAction {
     @Override
     public String displayOptions() {
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println("\n                                       Movies by title ");
+        System.out.println("\n                                       Movies by Title ");
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------\n");
 
         int i = 1;
@@ -37,7 +37,7 @@ public class TitleMenuAction extends MenuAction {
     @Override
     public void executeOption(String value) {
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println("\n                                       Movie title : " + value);
+        System.out.println("\n                                       Movie Title : " + value);
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------\n");
 
         for (Movie m : MovieDataSource.MOVIE_DATA_SOURCE) {
