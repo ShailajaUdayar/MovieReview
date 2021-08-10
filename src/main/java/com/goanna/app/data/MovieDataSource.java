@@ -108,16 +108,6 @@ public class MovieDataSource {
         return movies;
     }
 
-    public static List<Movie> getMoviesByYear(int fromYear, int toYear) {
-        List<Movie> movies = new ArrayList<>();
-        for (Movie m : MOVIE_DATA_SOURCE) {
-            if (m.getYear() >= fromYear && m.getYear() <= toYear) {
-                movies.add(m);
-            }
-        }
-        return movies;
-    }
-
     public static List<Movie> getMoviesByActor(String actor) {
         List<Movie> movies = new ArrayList<>();
         for (Movie m : MOVIE_DATA_SOURCE) {
