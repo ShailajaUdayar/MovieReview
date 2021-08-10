@@ -8,8 +8,10 @@ public class MainMenuAction extends MenuAction {
 
     public static final Map<String, String> MAIN_MENU = new HashMap<>();
 
+    public static final MainMenuAction MAIN_MENU_ACTION = new MainMenuAction();
     public static final GenreMenuAction GENRE_MENU_ACTION = new GenreMenuAction();
     public static final ExitMenuAction EXIT_MENU_ACTION = new ExitMenuAction();
+    public static final ActorMenuAction ACTOR_MENU_ACTION = new ActorMenuAction();
 
 
     static {
@@ -34,11 +36,9 @@ public class MainMenuAction extends MenuAction {
             System.out.println(entry.getKey() + ") " + entry.getValue());
         }
         System.out.println("----------------------------------------------------------------------------------------------------------------------------\n");
-        Scanner input = getUserInput();
 
-        String choice = input.next();
 
-        return choice;
+        return null;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class MainMenuAction extends MenuAction {
         String choice = input.next();
         switch (choice) {
             case "1" : return GENRE_MENU_ACTION;
-            case "2" :
+            case "2" : return ACTOR_MENU_ACTION;
             case "X" : return EXIT_MENU_ACTION;
         }
         return this;

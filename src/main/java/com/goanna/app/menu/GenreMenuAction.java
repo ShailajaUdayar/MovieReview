@@ -27,7 +27,7 @@ public class GenreMenuAction extends MenuAction {
     @Override
     public MenuAction getNextMenuAction() {
         pressAnyKeyToContinue();
-        return new MainMenuAction();//TODO
+        return MainMenuAction.MAIN_MENU_ACTION;
     }
 
     @Override

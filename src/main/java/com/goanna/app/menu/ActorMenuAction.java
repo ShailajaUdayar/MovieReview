@@ -1,7 +1,9 @@
 package com.goanna.app.menu;
 
+import com.goanna.app.data.Movie;
 import com.goanna.app.data.MovieDataSource;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -25,11 +27,17 @@ public class ActorMenuAction extends MenuAction {
 
     @Override
     public MenuAction getNextMenuAction() {
-        return null;
+        return MainMenuAction.MAIN_MENU_ACTION;
     }
 
     @Override
     public void executeOption(String choice) {
-
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("\n                                       Movies by Actor " + choice);
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------\n");
+        List<Movie> movies = MovieDataSource.getMoviesByActor(choice);
+        for (Movie m : movies) {
+            System.out.println(m.getTitle());
+        }
     }
 }

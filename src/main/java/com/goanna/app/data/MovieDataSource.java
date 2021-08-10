@@ -129,10 +129,17 @@ public class MovieDataSource {
     }
 
     public static Map<Integer, String> getAvailableActors() {
+        Set<String> actorSet = new TreeSet<>();
+
+        for (Movie m : MOVIE_DATA_SOURCE) {
+            actorSet.add(m.getActor());
+
+        }
+
         Map<Integer, String> actors = new HashMap<>();
         int i = 1;
-        for (Movie m : MOVIE_DATA_SOURCE) {
-            actors.put(i, m.getActor());
+        for (String a : actorSet) {
+            actors.put(i, a);
             i++;
         }
         return actors;
