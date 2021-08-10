@@ -138,6 +138,16 @@ public class MovieDataSource {
         return movies;
     }
 
+    public static List<Movie> getMoviesByMinimumYear(int year) {
+        List<Movie> movies = new ArrayList<>();
+        for (Movie m : MOVIE_DATA_SOURCE) {
+            if (m.getYear() >= year) {
+                movies.add(m);
+            }
+        }
+        return movies;
+    }
+
     public static Map<Integer, String> getAvailableActors() {
         Set<String> actorSet = new TreeSet<>();
 

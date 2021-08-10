@@ -14,6 +14,7 @@ public class MainMenuAction extends MenuAction {
     public static final ActorMenuAction ACTOR_MENU_ACTION = new ActorMenuAction();
     public static final TitleMenuAction TITLE_MENU_ACTION = new TitleMenuAction();
     public static final RatingMenuAction RATING_MENU_ACTION = new RatingMenuAction();
+    public static final YearMenuAction YEAR_MENU_ACTION = new YearMenuAction();
 
 
     static {
@@ -59,6 +60,7 @@ public class MainMenuAction extends MenuAction {
             case "2" : return ACTOR_MENU_ACTION;
             case "3" : return RATING_MENU_ACTION;
             case "4" : return TITLE_MENU_ACTION;
+            case "5" : return YEAR_MENU_ACTION;
             case "X" : return EXIT_MENU_ACTION;
         }
         return this;

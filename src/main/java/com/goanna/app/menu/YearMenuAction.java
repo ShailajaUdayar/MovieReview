@@ -6,11 +6,11 @@ import com.goanna.app.data.MovieDataSource;
 import java.util.List;
 import java.util.Scanner;
 
-public class RatingMenuAction extends MenuAction {
+public class YearMenuAction extends MenuAction {
     @Override
     public String displayOptions() {
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println("\n                                       Movies by minimum ratings (Integer): Enter minimum rating between 1 to 10 ");
+        System.out.println("\n                                       Movies by minimum year (Integer): Enter minimum year ");
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------\n");
 
         Scanner input = new Scanner(System.in);
@@ -26,11 +26,11 @@ public class RatingMenuAction extends MenuAction {
 
     @Override
     public void executeOption(String value) {
-        int minumRating = Integer.valueOf(value);
+        int minimumYear = Integer.valueOf(value);
 
-        List<Movie> movies = MovieDataSource.getMoviesByMinimumRating(minumRating);
+        List<Movie> movies = MovieDataSource.getMoviesByMinimumYear(minimumYear);
         for (Movie m : movies) {
-            System.out.println(m.getTitle() + " (" + m.getRating() + ")");
+            System.out.println(m.getTitle() + " (" + m.getYear() + ")");
         }
     }
 }
