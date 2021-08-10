@@ -5,7 +5,7 @@ public enum Genre {
     HORROR(2, "Horror"),
     ACTION(3, "Action"),
     DRAMA(4, "Drama"),
-    COMMEDY(5, "Comedy");
+    COMEDY(5, "Comedy");
 
     private final int option;
     private final String description;

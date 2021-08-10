@@ -1,7 +1,6 @@
 package com.goanna.app.data;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MovieDataSource {
 
@@ -10,36 +9,44 @@ public class MovieDataSource {
 
     static {
         Movie m1 = new Movie();
-        m1.setTitle("T1");
-        m1.setActor("A1");
-        m1.setGenre(Genre.ACTION);
-        m1.setRating(7.8);
-        m1.setYear(2000);
+        m1.setTitle("The Shawshank Redemption");
+        m1.setActor("Morgan Freeman");
+        m1.setGenre(Genre.DRAMA);
+        m1.setRating(9.3);
+        m1.setYear(1994);
         MOVIE_DATA_SOURCE.add(m1);
 
         Movie m2 = new Movie();
-        m2.setTitle("T2");
-        m2.setActor("A2");
+        m2.setTitle("The Dark Knight");
+        m2.setActor("Christian Bale");
         m2.setGenre(Genre.ACTION);
-        m2.setRating(5.8);
-        m2.setYear(2004);
+        m2.setRating(9.0);
+        m2.setYear(2008);
         MOVIE_DATA_SOURCE.add(m2);
 
         Movie m3 = new Movie();
-        m3.setTitle("T3");
-        m3.setActor("A3");
-        m3.setGenre(Genre.ACTION);
-        m3.setRating(6.8);
-        m3.setYear(2003);
+        m3.setTitle("Inception");
+        m3.setActor("Leonardo DiCaprio");
+        m3.setGenre(Genre.SCIFI);
+        m3.setRating(8.8);
+        m3.setYear(2010);
         MOVIE_DATA_SOURCE.add(m3);
 
         Movie m4 = new Movie();
-        m4.setTitle("T4");
-        m4.setActor("A4");
-        m4.setGenre(Genre.ACTION);
-        m4.setRating(8.8);
-        m4.setYear(2002);
+        m4.setTitle("The Conjuring");
+        m4.setActor("Patrick Wilson");
+        m4.setGenre(Genre.HORROR);
+        m4.setRating(7.5);
+        m4.setYear(2013);
         MOVIE_DATA_SOURCE.add(m4);
+
+        Movie m5 = new Movie();
+        m5.setTitle("The Suicide Squad");
+        m5.setActor("Margot Robbie");
+        m5.setGenre(Genre.COMEDY);
+        m5.setRating(7.6);
+        m5.setYear(2021);
+        MOVIE_DATA_SOURCE.add(m5);
 
     }
 
@@ -71,6 +78,16 @@ public class MovieDataSource {
             }
         }
         return movies;
+    }
+
+    public static Map<Integer, String> getAvailableActors() {
+        Map<Integer, String> actors = new HashMap<>();
+        int i = 1;
+        for (Movie m : MOVIE_DATA_SOURCE) {
+            actors.put(i, m.getActor());
+            i++;
+        }
+        return actors;
     }
 
 }
