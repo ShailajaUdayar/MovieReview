@@ -38,7 +38,7 @@ public class MainMenuAction extends MenuAction {
         for (Map.Entry<String, String> entry : MAIN_MENU.entrySet()) {
             System.out.println(entry.getKey() + ") " + entry.getValue());
         }
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------\n");
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------\n");
 
 
         return null;
