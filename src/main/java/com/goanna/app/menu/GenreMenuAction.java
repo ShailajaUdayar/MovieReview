@@ -18,8 +18,6 @@ public class GenreMenuAction extends MenuAction {
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------\n");
         Scanner input = new Scanner(System.in);
 
-        //Validation
-        //If X then exit
         String choice = input.next();
         return choice;
     }

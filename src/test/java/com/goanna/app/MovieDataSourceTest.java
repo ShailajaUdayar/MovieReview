@@ -93,7 +93,7 @@ class MovieDataSourceTest {
         assertEquals("Edge of Tomorrow", m1.getTitle());
         assertEquals(2014, m1.getYear());
         assertEquals("Tom Cruise", m1.getActor());
-      //  assertEquals(7.9, m1.getRating());
+
 
         List<Movie> moviesByMinimumYear2 = MovieDataSource.getMoviesByMinimumYear(2020);
         assertNotNull(moviesByMinimumYear2);
@@ -104,7 +104,7 @@ class MovieDataSourceTest {
         assertEquals("The Suicide Squad", m2.getTitle());
         assertEquals(2021, m2.getYear());
         assertEquals("Margot Robbie", m2.getActor());
-       // assertEquals(7.6, m2.getRating());
+
 
     }
 
